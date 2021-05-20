@@ -1,0 +1,142 @@
+//COLORES
+$colorPrimario: #495464;
+$colorSecundario: #bbbfca;
+$colorSecundarioOpacity: rgba(187, 191, 202, 0.3);
+$colorTerciario: #e8e8e8;
+$grisSuave: #f4f4f2;
+$lineaTxt: #4aa96c;
+
+//FUENTES
+$fuentePrimaria: "Montserrat", sans-serif;
+$fuenteSpan: "Dancing Script", sans-serif;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $fuentePrimaria;
+}
+
+// HEADING
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.null__padding {
+  padding: 0;
+}
+
+.null__margin {
+  margin: 0;
+}
+
+.container {
+  max-width: 120rem;
+  /*ocupa el 90% de los 120rem*/
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  background-image: url(../img/img_header.jpg);
+  filter: grayscale(70%);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 80vh;
+}
+
+// BARRA
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .barra__logo {
+    font-family: $fuenteSpan;
+    color: white;
+  }
+
+  .barra__navegacion {
+    font-size: 1.8rem;
+    a {
+      margin-left: 3rem;
+      color: white;
+      transition: all 0.4s ease;
+      &:hover {
+        font-size: 1.9rem;
+        color: $colorSecundario;
+      }
+    }
+  }
+}
+
+.header__text {
+  text-align: center;
+  margin-top: 15rem;
+
+  .header__text__title {
+    display: inline-block;
+    font-size: 4rem;
+    font-weight: 400;
+    color: $grisSuave;
+    border: 1.3px solid $lineaTxt;
+    padding: 2rem;
+  }
+
+  .header__text__parrafo {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .header__text__button {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: $grisSuave;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 1.6rem;
+    margin-top: 4rem;
+    transition: background-color 0.4s ease;
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+//PORTAFOLIO
+
+.acerca {
+  height: 1000px;
+  background-color: $colorTerciario;
+
+  .acerca__title {
+    text-align: center;
+    padding-top: 10rem;
+  }
+}

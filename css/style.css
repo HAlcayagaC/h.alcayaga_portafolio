@@ -1,0 +1,140 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.null__padding {
+  padding: 0;
+}
+
+.null__margin {
+  margin: 0;
+}
+
+.container {
+  max-width: 120rem;
+  /*ocupa el 90% de los 120rem*/
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  background-image: url(../img/img_header.jpg);
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 80vh;
+}
+
+.barra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.barra .barra__logo {
+  font-family: "Dancing Script", sans-serif;
+  color: white;
+}
+
+.barra .barra__navegacion {
+  font-size: 1.8rem;
+}
+
+.barra .barra__navegacion a {
+  margin-left: 3rem;
+  color: white;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.barra .barra__navegacion a:hover {
+  font-size: 1.9rem;
+  color: #bbbfca;
+}
+
+.header__text {
+  text-align: center;
+  margin-top: 15rem;
+}
+
+.header__text .header__text__title {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #f4f4f2;
+  border: 1.3px solid #4aa96c;
+  padding: 2rem;
+}
+
+.header__text .header__text__parrafo {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.header__text .header__text__button {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #f4f4f2;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 1.6rem;
+  margin-top: 4rem;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+}
+
+.header__text .header__text__button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.acerca {
+  height: 1000px;
+  background-color: #e8e8e8;
+}
+
+.acerca .acerca__title {
+  text-align: center;
+  padding-top: 10rem;
+}
+/*# sourceMappingURL=style.css.map */
