@@ -63,12 +63,12 @@ a {
 
 .header {
   background-image: url(../img/img_header.jpg);
-  filter: grayscale(70%);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 80vh;
+  height: 100vh;
+
 }
 
 // BARRA
@@ -80,7 +80,7 @@ a {
 
   .barra__logo {
     font-family: $fuenteSpan;
-    color: white;
+    color: $colorPrimario;
   }
 
   .barra__navegacion {
@@ -88,7 +88,7 @@ a {
     a {
       margin-left: 3rem;
       color: white;
-      transition: all 0.4s ease;
+      transition: all 0.5s ease;
       &:hover {
         font-size: 1.9rem;
         color: $colorSecundario;
@@ -99,14 +99,14 @@ a {
 
 .header__text {
   text-align: center;
-  margin-top: 15rem;
+  margin-top: 30rem;
 
   .header__text__title {
     display: inline-block;
     font-size: 4rem;
     font-weight: 400;
     color: $grisSuave;
-    border: 1.3px solid $lineaTxt;
+    border: 0.4rem solid $lineaTxt;
     padding: 2rem;
   }
 
@@ -120,23 +120,93 @@ a {
     font-size: 1.5rem;
     color: $grisSuave;
     background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
     padding: 1.6rem;
     margin-top: 4rem;
-    transition: background-color 0.4s ease;
-    &:hover{
-        background-color: rgba(255, 255, 255, 0.2);
+    .fa-angle-double-down {
+      color: black;
+      font-size: 2rem;
+      transition: transform 0.5s ease;
+      &:hover {
+        transform: translateY(1rem);
+      }
     }
   }
 }
 
 //PORTAFOLIO
 
-.acerca {
-  height: 1000px;
+.about {
+  height: 800px;
   background-color: $colorTerciario;
 
-  .acerca__title {
-    text-align: center;
-    padding-top: 10rem;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+
+    .about__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .about__text__title {
+        font-family: $fuenteSpan;
+        border-left: 1rem solid $colorPrimario;
+        padding-left: 3rem;
+        h2 {
+          text-transform: uppercase;
+          font-size: 10rem;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      .about__section__p {
+        margin-top: 2rem;
+        p {
+          font-size: 2rem;
+          text-indent: 5rem;
+        }
+      }
+
+      .about__section__button {
+        .fa-download {
+          font-size: 2rem;
+          color: white;
+          padding-right: 1rem;
+        }
+
+        a {
+          display: inline-block;
+          background-color: $colorPrimario;
+          padding: 2rem 3rem;
+          color: white;
+          transition: background-color 0.2s ease-in-out;
+          &:hover {
+            background-color: $colorSecundario;
+          }
+        }
+      }
+    }
   }
+}
+
+// SKILL
+
+.skill {
+  height: 800px;
+  background-color: $colorPrimario;
+}
+
+// PORTAFOLIO
+.portafolio {
+  height: 1000px;
+  background-color: $colorTerciario;
+}
+
+// FOOTER
+.footer {
+  background-color: black;
+  height: 200px;
 }

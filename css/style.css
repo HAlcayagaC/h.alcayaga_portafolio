@@ -52,13 +52,11 @@ a {
 
 .header {
   background-image: url(../img/img_header.jpg);
-  -webkit-filter: grayscale(70%);
-          filter: grayscale(70%);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 80vh;
+  height: 100vh;
 }
 
 .barra {
@@ -75,7 +73,7 @@ a {
 
 .barra .barra__logo {
   font-family: "Dancing Script", sans-serif;
-  color: white;
+  color: #495464;
 }
 
 .barra .barra__navegacion {
@@ -85,8 +83,8 @@ a {
 .barra .barra__navegacion a {
   margin-left: 3rem;
   color: white;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .barra .barra__navegacion a:hover {
@@ -96,7 +94,7 @@ a {
 
 .header__text {
   text-align: center;
-  margin-top: 15rem;
+  margin-top: 30rem;
 }
 
 .header__text .header__text__title {
@@ -104,7 +102,7 @@ a {
   font-size: 4rem;
   font-weight: 400;
   color: #f4f4f2;
-  border: 1.3px solid #4aa96c;
+  border: 0.4rem solid #4aa96c;
   padding: 2rem;
 }
 
@@ -118,23 +116,106 @@ a {
   font-size: 1.5rem;
   color: #f4f4f2;
   background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
   padding: 1.6rem;
   margin-top: 4rem;
-  -webkit-transition: background-color 0.4s ease;
-  transition: background-color 0.4s ease;
 }
 
-.header__text .header__text__button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+.header__text .header__text__button .fa-angle-double-down {
+  color: black;
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.acerca {
+.header__text .header__text__button .fa-angle-double-down:hover {
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+}
+
+.about {
+  height: 800px;
+  background-color: #e8e8e8;
+}
+
+.about .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about .container .about__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .container .about__text .about__text__title {
+  font-family: "Dancing Script", sans-serif;
+  border-left: 1rem solid #495464;
+  padding-left: 3rem;
+}
+
+.about .container .about__text .about__text__title h2 {
+  text-transform: uppercase;
+  font-size: 10rem;
+  padding: 0;
+  margin: 0;
+}
+
+.about .container .about__text .about__section__p {
+  margin-top: 2rem;
+}
+
+.about .container .about__text .about__section__p p {
+  font-size: 2rem;
+  text-indent: 5rem;
+}
+
+.about .container .about__text .about__section__button .fa-download {
+  font-size: 2rem;
+  color: white;
+  padding-right: 1rem;
+}
+
+.about .container .about__text .about__section__button a {
+  display: inline-block;
+  background-color: #495464;
+  padding: 2rem 3rem;
+  color: white;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.about .container .about__text .about__section__button a:hover {
+  background-color: #bbbfca;
+}
+
+.skill {
+  height: 800px;
+  background-color: #495464;
+}
+
+.portafolio {
   height: 1000px;
   background-color: #e8e8e8;
 }
 
-.acerca .acerca__title {
-  text-align: center;
-  padding-top: 10rem;
+.footer {
+  background-color: black;
+  height: 200px;
 }
 /*# sourceMappingURL=style.css.map */
