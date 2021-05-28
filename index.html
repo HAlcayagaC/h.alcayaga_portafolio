@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@200;400;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Montserrat:wght@100;300&display=swap"
         rel="stylesheet">
     <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -22,7 +22,7 @@
         <div class="container">
             <div class="barra">
                 <a class="barra__logo" href="index.html">
-                    <h1 class="logo__name">Hernán <span>/</span> Alcayaga</h1>
+                    <h1 class="logo__name">H <span>/</span> A</h1>
                 </a>
                 <nav class="barra__navegacion">
                     <a href="#" class="barra__navegacion__a">Acerca de</a>
@@ -32,19 +32,20 @@
                 </nav>
             </div>
         </div>
-
-        <div class="header__text">
-            <h2 class="header__text__title">Hello¡ I'M <span> Hernán </span></h2>
-            <p class="header__text__parrafo">Bienvenido a mi portafolio</p>
-            <a class="header__text__button" href="#"><i class="fas fa-angle-double-down"></i></a>
-        </div>
     </header>
 
-    <section class="about">
+    <section class="presentation">
+        <div class="presentation__text">
+            <h2 class="presentation__text__title">Hello¡ I'M <span> Hernán </span></h2>
+            <p class="presentation__text__parrafo">Bienvenido a mi portafolio</p>
+            <a class="presentation__text__button" href="#"><i class="fas fa-angle-double-down"></i></a>
+        </div>
+    </section>
 
+    <section class="about">
         <div class="container">
             <div class="about__text">
-                <div class="about__text__title">
+                <div class="title__section">
                     <h2>About <span>me</span></h2>
                 </div>
                 <div class="about__section__p">
@@ -59,17 +60,93 @@
             <div class="about__image">
                 <img class="about__image__img" src="/img/img_about.svg" alt="" srcset="">
             </div>
-
         </div>
-
     </section>
 
     <section class="skill">
+        <div class="title__section">
+            <h2 class="null__margin">Skills</h2>
+        </div>
+        <div class="container">
+            <div class="skill__card">
+                <div class="card__logo">
+                    <img src="/img/html-5.png" alt="">
+                </div>
+                <div class="card__title">
+                    <h3>HTML5</h3>
+                </div>
+            </div>
 
+            <div class="skill__card">
+                <div class="card__logo">
+                    <img src="/img/css-3.png" alt="">
+                </div>
+                <div class="card__title">
+                    <h3>CSS3</h3>
+                </div>
+            </div>
+
+            <div class="skill__card">
+                <div class="card__logo">
+                    <img src="/img/sass.png" alt="">
+                </div>
+                <div class="card__title">
+                    <h3>SASS</h3>
+                </div>
+            </div>
+
+            <div class="skill__card">
+                <div class="card__logo">
+                    <img src="/img/javascript.png" alt="">
+                </div>
+                <div class="card__title">
+                    <h3>Javascript</h3>
+                </div>
+            </div>
+
+            <div class="skill__card">
+                <div class="card__logo">
+                    <img src="/img/angular.png" alt="">
+                </div>
+                <div class="card__title">
+                    <h3>Angular 5</h3>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="portafolio">
+        <div class="title__section">
+            <h2 class="null__margin">Portafolios</h2>
+        </div>
+    </section>
 
+    <section class="contact">
+        <div class="container">
+            <div class="contact__text">
+                <div class="title__section">
+                    <h2>Contacto</h2>
+                </div>
+            </div>
+            <form class="form">
+                <div class="form__camp">
+                    <label for="input__name">Nombre</label>
+                    <input type="text" name="" id="input__name" class="input__name">
+                </div>
+                <div class="form__camp">
+                    <label for="input__email">Email</label>
+                    <input type="text" name="" id="input__email" class="input__email">
+                </div>
+                <div class="form__camp">
+                    <label for="input__message">Mensaje</label>
+                    <textarea name="" id="input__message"></textarea>
+                </div>
+                <div class="form__camp">
+                    <input type="submit" value="Enviar">
+                </div>
+
+            </form>
+        </div>
     </section>
 
     <footer class="footer">

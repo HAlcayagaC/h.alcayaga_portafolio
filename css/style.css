@@ -50,13 +50,25 @@ a {
   margin: 0 auto;
 }
 
+.title__section {
+  text-align: center;
+  margin: 0;
+  padding-top: 3rem;
+  font-family: "Bowlby One SC", sans-serif;
+}
+
+.title__section h2 {
+  display: inline-block;
+  font-size: 4rem;
+  border-left: 1rem solid #f4f4f2;
+  padding-left: 3rem;
+}
+
 .header {
-  background-image: url(../img/img_header.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(18, 18, 19, 0.418);
 }
 
 .barra {
@@ -72,8 +84,8 @@ a {
 }
 
 .barra .barra__logo {
-  font-family: "Dancing Script", sans-serif;
-  color: #495464;
+  font-family: "Montserrat", sans-serif;
+  color: white;
 }
 
 .barra .barra__navegacion {
@@ -92,12 +104,21 @@ a {
   color: #bbbfca;
 }
 
-.header__text {
-  text-align: center;
-  margin-top: 30rem;
+.presentation {
+  background-image: url(../img/img_header.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
 }
 
-.header__text .header__text__title {
+.presentation__text {
+  text-align: center;
+  padding-top: 30rem;
+}
+
+.presentation__text .presentation__text__title {
   display: inline-block;
   font-size: 4rem;
   font-weight: 400;
@@ -106,12 +127,12 @@ a {
   padding: 2rem;
 }
 
-.header__text .header__text__parrafo {
+.presentation__text .presentation__text__parrafo {
   font-size: 1.5rem;
   color: white;
 }
 
-.header__text .header__text__button {
+.presentation__text .presentation__text__button {
   display: inline-block;
   font-size: 1.5rem;
   color: #f4f4f2;
@@ -121,7 +142,7 @@ a {
   margin-top: 4rem;
 }
 
-.header__text .header__text__button .fa-angle-double-down {
+.presentation__text .presentation__text__button .fa-angle-double-down {
   color: black;
   font-size: 2rem;
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -130,7 +151,7 @@ a {
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.header__text .header__text__button .fa-angle-double-down:hover {
+.presentation__text .presentation__text__button .fa-angle-double-down:hover {
   -webkit-transform: translateY(1rem);
           transform: translateY(1rem);
 }
@@ -138,6 +159,7 @@ a {
 .about {
   height: 800px;
   background-color: #e8e8e8;
+  padding-top: 10rem;
 }
 
 .about .container {
@@ -164,14 +186,13 @@ a {
 }
 
 .about .container .about__text .about__text__title {
-  font-family: "Dancing Script", sans-serif;
+  font-family: "Bowlby One SC", sans-serif;
   border-left: 1rem solid #495464;
   padding-left: 3rem;
 }
 
 .about .container .about__text .about__text__title h2 {
-  text-transform: uppercase;
-  font-size: 10rem;
+  font-size: 4rem;
   padding: 0;
   margin: 0;
 }
@@ -183,6 +204,7 @@ a {
 .about .container .about__text .about__section__p p {
   font-size: 2rem;
   text-indent: 5rem;
+  line-height: 2;
 }
 
 .about .container .about__text .about__section__button .fa-download {
@@ -205,8 +227,78 @@ a {
 }
 
 .skill {
-  height: 800px;
+  height: 500px;
   background-color: #495464;
+}
+
+.skill__text__title {
+  text-align: center;
+  margin: 0;
+  padding-top: 3rem;
+  font-family: "Bowlby One SC", sans-serif;
+}
+
+.skill__text__title h2 {
+  display: inline-block;
+  font-size: 4rem;
+  border-left: 1rem solid #f4f4f2;
+  padding-left: 3rem;
+}
+
+.skill .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 8rem;
+}
+
+.skill__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-left: 3rem;
+}
+
+.skill__card:nth-child(1) {
+  margin-left: 0;
+}
+
+.skill__card .card__logo img {
+  opacity: 0.5;
+  height: 200px;
+  width: 100%;
+}
+
+.skill__card .card__title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.skill__card .card__title h3 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 100;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  color: white;
+}
+
+.skill__card .card__title h3:hover {
+  font-size: 3rem;
+  background-color: rgba(150, 150, 151, 0.171);
 }
 
 .portafolio {
@@ -214,8 +306,91 @@ a {
   background-color: #e8e8e8;
 }
 
+.portafolio__text__title {
+  text-align: center;
+  margin: 0;
+  padding-top: 3rem;
+  font-family: "Bowlby One SC", sans-serif;
+}
+
+.portafolio__text__title h2 {
+  display: inline-block;
+  font-size: 4rem;
+  border-left: 1rem solid #f4f4f2;
+  padding-left: 3rem;
+}
+
+.contact {
+  height: 500px;
+  background-image: url(../img/img-contact.webp);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10rem;
+}
+
+.contact .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(187, 191, 202, 0.3);
+  padding: 5rem;
+}
+
+.form .form__camp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 2rem;
+}
+
+.form .form__camp label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 2rem;
+}
+
+.form .form__camp input[type="text"],
+.form .form__camp input[type="number"],
+.form .form__camp input[type="email"],
+.form .form__camp input[type="submit"],
+.form .form__camp textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+}
+
+.form .form__camp input[type="submit"] {
+  padding: 2rem 1rem;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.form .form__camp input[type="submit"]:hover {
+  background-color: #bbbfca;
+}
+
 .footer {
   background-color: black;
-  height: 200px;
+  height: 100px;
 }
 /*# sourceMappingURL=style.css.map */
