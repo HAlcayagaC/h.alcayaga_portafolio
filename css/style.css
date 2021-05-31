@@ -29,6 +29,29 @@ a {
   display: inline-block;
   padding: 1.5rem 3.5rem;
   color: white;
+  cursor: pointer;
+}
+
+.button--more {
+  background-color: #e1701a;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  border: none;
+}
+
+.button--more:hover {
+  background-color: #f7a440;
+}
+
+.button--submit {
+  background-color: #e1701a;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  border: none;
+}
+
+.button--submit:hover {
+  background-color: #f7a440;
 }
 
 .title__section {
@@ -42,6 +65,18 @@ a {
 }
 
 .title__section--about {
+  border-left: 1rem solid #aaaaaa;
+}
+
+.title__section--skills {
+  border-left: 1rem solid #e1701a;
+}
+
+.title__section--porta {
+  border-left: 1rem solid #aaaaaa;
+}
+
+.title__section--contact {
   border-left: 1rem solid #aaaaaa;
 }
 
@@ -141,6 +176,7 @@ a {
   height: 100vh;
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 #presentation .presentation__title {
@@ -158,7 +194,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #aaaaaac4;
-  padding: 20rem;
+  padding: 3rem;
 }
 
 #presentation .presentation__title h2 {
@@ -176,14 +212,10 @@ a {
   margin: 3rem;
 }
 
-#presentation .presentation__title .button--more {
-  background-color: #e1701a;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-#presentation .presentation__title .button--more:hover {
-  background-color: #f7a440;
+@media (min-width: 768px) {
+  #presentation .presentation__title {
+    padding: 20rem;
+  }
 }
 
 #about {
@@ -220,5 +252,276 @@ a {
     text-indent: 5rem;
     line-height: 2;
   }
+}
+
+#skills {
+  background-color: #aaaaaa;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#skills .skill__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2rem;
+}
+
+#skills .skill__container .skills__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#skills .skill__container .skills__card .card__img {
+  text-align: center;
+}
+
+#skills .skill__container .skills__card .card__img img {
+  width: 10%;
+}
+
+@media (min-width: 768px) {
+  #skills {
+    padding-top: 4rem;
+  }
+  #skills .skill__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 10rem 2rem;
+  }
+  #skills .skill__container .skills__card {
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  #skills .skill__container .skills__card .card__img {
+    text-align: center;
+  }
+  #skills .skill__container .skills__card .card__img img {
+    padding-top: 5rem;
+    width: 50%;
+  }
+  #skills .skill__container .skills__card .card__title {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-size: 2rem;
+  }
+  #skills .skill__container .skills__card:hover {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.705);
+    height: 100%;
+  }
+  #skills .skill__container .skills__card:hover .card__title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.664);
+            box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.664);
+  }
+  #skills .skill__container .skills__card:hover .card__title h3 {
+    padding-top: 20rem;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+  }
+}
+
+#portafolio {
+  background-color: #f7a440;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#portafolio .title__section {
+  margin: 1rem 0;
+}
+
+#portafolio .portafolio__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+#portafolio .portafolio__grid .portafolio__card {
+  position: relative;
+}
+
+#portafolio .portafolio__grid .portafolio__card .card__img {
+  padding: 0;
+  margin: 0;
+}
+
+#portafolio .portafolio__grid .portafolio__card .card__img img {
+  width: 100%;
+}
+
+#portafolio .portafolio__grid .portafolio__card .card__text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.411);
+  color: white;
+  padding: 3rem 0;
+}
+
+#contact {
+  height: 100vh;
+  background-image: url(../img/img-contact.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contact__main {
+  padding-top: 35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__main .contact__main__p {
+  margin-bottom: 2rem;
+}
+
+.contact__main__inputs {
+  background-color: #aaaaaac4;
+  padding: 3rem;
+  width: 70%;
+}
+
+.contact__main__inputs .form__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4rem;
+}
+
+.contact__main__inputs .form__contact .form__contact__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1rem;
+}
+
+.contact__main__inputs .form__contact .form__contact__input label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 2rem;
+  color: white;
+}
+
+.contact__main__inputs .form__contact .form__contact__input input[type="text"],
+.contact__main__inputs .form__contact .form__contact__input input[type="email"],
+.contact__main__inputs .form__contact .form__contact__input textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem 0;
+  border: 0.2px solid #aaaaaac4;
+  background-color: transparent;
+}
+
+.contact__main__inputs .form__contact .form__contact__input input[type="text"]:hover,
+.contact__main__inputs .form__contact .form__contact__input input[type="email"]:hover,
+.contact__main__inputs .form__contact .form__contact__input textarea:hover {
+  border: 0.2px solid #e1701a;
+}
+
+.contact__main__inputs .form__contact .form__contact__input .button--submit {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.footer {
+  height: 200px;
+  background-color: black;
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5rem;
+}
+
+.footer .container .footer__rrss {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  font-size: 4rem;
+}
+
+.footer .container .footer__rrss .fab {
+  padding-right: 1rem;
+}
+
+.footer .container .footer__rrss .fab:nth-child(4) {
+  padding-right: 0;
 }
 /*# sourceMappingURL=style.css.map */
