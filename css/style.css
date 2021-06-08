@@ -2,6 +2,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -103,6 +104,8 @@ img {
   background-color: white;
   padding: 2rem;
   z-index: 999;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .barra {
@@ -160,6 +163,44 @@ img {
   }
   .barra .barra__navegacion--phone {
     display: none;
+  }
+  .mobile {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 340px) {
+  .barra {
+    position: relative;
+  }
+  .barra .barra__navegacion__mobile {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    background-color: #aaaaaac4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 80vh;
+    width: 50%;
+  }
+  .barra .barra__navegacion__mobile .barra__navegacion__a {
+    font-size: 2rem;
+    padding-bottom: 3rem;
+  }
+  .barra .mobile {
+    visibility: hidden;
   }
 }
 
@@ -423,7 +464,7 @@ img {
 
 .contact__main__inputs {
   background-color: #aaaaaac4;
-  padding: 3rem;
+  padding: 1rem;
   width: 100%;
 }
 
@@ -435,7 +476,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 .contact__main__inputs .form__contact .form__contact__input {
@@ -477,6 +518,34 @@ img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.message {
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 2rem;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.message__div__success {
+  display: block;
+  background-color: green;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.message__div__error {
+  background-color: red;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.message__div__info {
+  background-color: yellow;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {

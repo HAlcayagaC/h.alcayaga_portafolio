@@ -11,6 +11,7 @@ $fuenteTitles: "Bowlby One SC", sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -107,6 +108,7 @@ img {
   background-color: white;
   padding: 2rem;
   z-index: 999;
+  transition: all 0.4s ease-in-out;
 }
 .barra {
   display: flex;
@@ -147,6 +149,35 @@ img {
     }
     .barra__navegacion--phone {
       display: none;
+    }
+  }
+
+  .mobile {
+    visibility: hidden;
+  }
+}
+@media (min-width: 340px) {
+  .barra {
+    position: relative;
+    .barra__navegacion__mobile {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 80px;
+      background-color: $colorButtonATransparence;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      width: 50%;
+      .barra__navegacion__a {
+        font-size: 2rem;
+        padding-bottom: 3rem;
+      }
+    }
+    .mobile {
+      visibility: hidden;
     }
   }
 }
@@ -336,7 +367,6 @@ img {
       img {
         filter: drop-shadow(8px 10px 10px gray);
       }
-
     }
   }
 }
@@ -364,12 +394,12 @@ img {
 
 .contact__main__inputs {
   background-color: $colorButtonATransparence;
-  padding: 3rem;
+  padding: 1rem;
   width: 100%;
   .form__contact {
     display: flex;
     flex-direction: column;
-    margin-top: 4rem;
+    margin-top: 1rem;
     .form__contact__input {
       display: flex;
       align-items: center;
@@ -396,6 +426,34 @@ img {
       }
     }
   }
+}
+
+.message {
+  // display: none;
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 2rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.message__div__success {
+  display: block;
+  background-color: green;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.message__div__error {
+  background-color: red;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.message__div__info {
+  background-color: yellow;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {

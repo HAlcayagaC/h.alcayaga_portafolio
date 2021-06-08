@@ -29,10 +29,17 @@
                 </a>
 
                 <nav class="barra__navegacion">
-                    <a href="#" class="barra__navegacion__a">Acerca de</a>
-                    <a href="#" class="barra__navegacion__a">Skills</a>
-                    <a href="#" class="barra__navegacion__a">Portafolio</a>
-                    <a href="#" class="barra__navegacion__a">Contacto</a>
+                    <a href="#about" class="barra__navegacion__a">Acerca de</a>
+                    <a href="#skills" class="barra__navegacion__a">Skills</a>
+                    <a href="#portafolio" class="barra__navegacion__a">Portafolio</a>
+                    <a href="#contact" class="barra__navegacion__a">Contacto</a>
+                </nav>
+
+                <nav class="barra__navegacion__mobile mobile">
+                    <a href="#about" class="barra__navegacion__a">Acerca de</a>
+                    <a href="#skills" class="barra__navegacion__a">Skills</a>
+                    <a href="#portafolio" class="barra__navegacion__a">Portafolio</a>
+                    <a href="#contact" class="barra__navegacion__a">Contacto</a>
                 </nav>
 
                 <div class="barra__navegacion barra__navegacion--phone">
@@ -178,28 +185,32 @@
                 </div>
                 <div class="contact__main__inputs">
                     <form class="form__contact">
+                        <div class="message"></div>
+
                         <div class="form__contact__input">
                             <label for="input__name">Nombre</label>
-                            <input type="text" class="input__name" id="input__name" placeholder="Ingrese su nombre">
+                            <input type="text" class="input__name" id="input__name" placeholder="Ingrese su nombre"
+                                required>
                         </div>
                         <div class="form__contact__input">
                             <label for="input__email">Email</label>
-                            <input type="email" class="input__email" id="input__email" placeholder="Ingrese su Email">
+                            <input type="email" class="input__email" id="input__email" placeholder="Ingrese su Email"
+                                required>
                         </div>
                         <div class="form__contact__input">
                             <label for="input__mesagge">Mensaje</label>
-                            <textarea class="input__mesagge" id="input__mesagge"
-                                placeholder="Detalle su mensaje"></textarea>
+                            <textarea class="input__mesagge" id="input__mesagge" placeholder="Detalle su mensaje"
+                                required></textarea>
                         </div>
                         <div class="form__contact__input">
-                            <input class="button button--submit" type="submit" value="Enviar">
+                            <input class="button button--submit boton__submit" type="submit" value="Enviar">
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <footer class="footer">
         <div class="container">
             <div class="footer__logo">
@@ -221,6 +232,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
