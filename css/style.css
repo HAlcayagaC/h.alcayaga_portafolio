@@ -35,8 +35,8 @@ a {
 
 .button--more {
   background-color: #e1701a;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
   border: none;
 }
 
@@ -46,12 +46,24 @@ a {
 
 .button--submit {
   background-color: #e1701a;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
   border: none;
 }
 
 .button--submit:hover {
+  background-color: #f7a440;
+}
+
+.button--cv {
+  background-color: #aaaaaa;
+  color: black;
+  -webkit-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
+  border: none;
+}
+
+.button--cv:hover {
   background-color: #f7a440;
 }
 
@@ -104,8 +116,8 @@ img {
   background-color: white;
   padding: 2rem;
   z-index: 999;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .barra {
@@ -266,8 +278,7 @@ img {
 
 #about {
   background-color: #e1701a;
-  height: 100vh;
-  padding-top: 10rem;
+  padding: 10rem;
 }
 
 .about__main .about__main__img img {
@@ -280,9 +291,6 @@ img {
 }
 
 @media (min-width: 768px) {
-  #about {
-    padding-top: 20rem;
-  }
   .about__main {
     display: -ms-grid;
     display: grid;
@@ -315,6 +323,19 @@ img {
 }
 
 #skills .skill__container {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#skills .skill__container .skills__card {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,83 +346,39 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5rem 0;
 }
 
-#skills .skill__container .skills__card {
-  width: 70%;
-}
-
-#skills .skill__container .skills__card img {
-  text-align: center;
-  width: 100%;
+#skills .skill__container .skills__card .card__img {
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
 #skills .skill__container .skills__card .card__title {
-  text-align: center;
   font-size: 2rem;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
 }
 
-#skills .skill__container .skills__card .card__title h3 {
-  margin: 0;
+#skills .skill__container .skills__card:hover .card__img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   #skills .skill__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
   }
   #skills .skill__container .skills__card {
-    width: 240px;
-  }
-  #skills .skill__container .skills__card img {
-    width: 100%;
-  }
-  #skills .skill__container .skills__card:hover {
-    position: relative;
-  }
-  #skills .skill__container .skills__card:hover .card__title {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #f7a440;
-  }
-  #skills .skill__container .skills__card:hover .card__title h3 {
-    color: white;
-    font-size: 3rem;
+    width: 25%;
   }
 }
 
 #portafolio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #aaaaaac4;
   padding: 3rem 0;
-}
-
-#portafolio .title__section {
-  margin-bottom: 2rem;
-}
-
-#portafolio .portafolio__card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,38 +391,74 @@ img {
           align-items: center;
 }
 
-#portafolio .portafolio__card .card__text {
+#portafolio .portafolio__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 2rem;
+}
+
+#portafolio .portafolio__grid .portafolio__card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1rem;
+}
+
+#portafolio .portafolio__grid .portafolio__card .card__img {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+#portafolio .portafolio__grid .portafolio__card .card__text {
   font-size: 2rem;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
 }
 
-#portafolio .portafolio__card .card__img img {
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+#portafolio .portafolio__grid .portafolio__card:hover .card__img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 10px 15px 10px #aaaaaac4;
+          box-shadow: 10px 15px 10px #aaaaaac4;
 }
 
-#portafolio .portafolio__card:hover .card__text {
+#portafolio .portafolio__grid .portafolio__card:hover .card__text {
   color: #e1701a;
 }
 
-#portafolio .portafolio__card:hover img {
-  -webkit-filter: drop-shadow(8px 10px 10px gray);
-          filter: drop-shadow(8px 10px 10px gray);
-}
-
 @media (min-width: 768px) {
-  .portafolio__grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+  #portafolio .portafolio__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #portafolio .portafolio__grid .portafolio__card {
+    width: 33%;
   }
 }
 
 .contact__main {
-  padding: 2rem 0;
+  padding: 15rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -562,7 +575,6 @@ img {
 }
 
 .footer {
-  height: 160px;
   background-color: black;
 }
 
@@ -570,28 +582,39 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 4rem 0;
 }
 
 .footer .container .footer__rrss {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: white;
-  font-size: 4rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.footer .container .footer__rrss .fab {
+.footer .container .footer__rrss .rrss i {
   padding-right: 1rem;
+  font-size: 2rem;
+  color: #aaaaaa;
 }
 
-.footer .container .footer__rrss .fab:nth-child(4) {
-  padding-right: 0;
+.footer .container .footer__text p {
+  color: #aaaaaa;
+  font-size: 1.4rem;
 }
 /*# sourceMappingURL=style.css.map */
