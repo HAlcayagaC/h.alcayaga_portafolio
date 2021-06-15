@@ -154,3 +154,8 @@ const validarInputs = (tipo, expresion, valor) => {
       break;
   }
 };
+
+//AÑO FOOTER
+const fechaAno = new Date().getFullYear();
+const spanDate = document.querySelector(".footer__text__year");
+spanDate.innerHTML = fechaAno;
